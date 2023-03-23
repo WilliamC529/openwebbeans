@@ -9,10 +9,11 @@ jobs:
       - name: Set up JDK 8
         uses: actions/setup-java@v3
         with:
-          java-version: '11'
+          java-version: '8'
           distribution: 'temurin'
       - name: Test
-        run: 
+        run: |
+          git chcekout 424af4bb7285b806d3e3efe5020cd3e440e0a4ff
           mvn -pl webbeans-impl test -Dtest=org.apache.webbeans.test.annotation.binding.BeanCacheKeyUnitTest.testEquals2AnnotationsUnorderedParam
         
   Test_With_Nondex_Shuffling:
@@ -22,8 +23,9 @@ jobs:
       - name: Set up JDK 8
         uses: actions/setup-java@v3
         with:
-          java-version: '11'
+          java-version: '8'
           distribution: 'temurin'
       - name: Test
-        run: 
+        run: |
+          git chcekout 424af4bb7285b806d3e3efe5020cd3e440e0a4ff
           mvn -pl webbeans-impl edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=org.apache.webbeans.test.annotation.binding.BeanCacheKeyUnitTest.testEquals2AnnotationsUnorderedParam
