@@ -26,4 +26,4 @@ jobs:
           distribution: 'temurin'
       - name: Test
         run: 
-          mvn -pl webbeans-impl -am edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=org.apache.webbeans.test.annotation.binding.BeanCacheKeyUnitTest.testEquals2AnnotationsUnorderedParam -DfailIfNoTests=false
+          mvn -pl webbeans-impl -am edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=org.apache.webbeans.test.annotation.binding.BeanCacheKeyUnitTest.testEquals2AnnotationsUnorderedParam -DfailIfNoTests=false
