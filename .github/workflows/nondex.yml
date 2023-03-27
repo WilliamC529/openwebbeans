@@ -13,7 +13,7 @@ jobs:
           distribution: 'temurin'
       - name: Test
         run: 
-          mvn -pl webbeans-impl test -Dtest=org.apache.webbeans.test.annotation.binding.BeanCacheKeyUnitTest.testEquals2AnnotationsUnorderedParam -DfailIfNoTests=false
+          mvn -pl webbeans-impl test -Dtest=org.apache.webbeans.test.annotation.binding.BeanCacheKeyUnitTest -DfailIfNoTests=false
         
   Test_With_Nondex_Shuffling:
     runs-on: ubuntu-latest
@@ -26,4 +26,4 @@ jobs:
           distribution: 'temurin'
       - name: Test
         run: 
-          mvn -pl webbeans-impl edu.illinois:nondex-maven-plugin:2.1.1:nondex -DnondexRuns=15 -Dtest=org.apache.webbeans.test.annotation.binding.BeanCacheKeyUnitTest.testEquals2AnnotationsUnorderedParam -DfailIfNoTests=false
+          mvn -pl webbeans-impl edu.illinois:nondex-maven-plugin:2.1.1:nondex -DnondexRuns=15 -Dtest=org.apache.webbeans.test.annotation.binding.BeanCacheKeyUnitTest -DfailIfNoTests=false
