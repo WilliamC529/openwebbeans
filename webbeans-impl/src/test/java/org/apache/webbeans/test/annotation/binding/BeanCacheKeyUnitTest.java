@@ -210,7 +210,7 @@ public class BeanCacheKeyUnitTest
     {
         BeanCacheKey a = new BeanCacheKey(true, String.class, null, it -> null, a13);
         BeanCacheKey b = new BeanCacheKey(true, String.class, null, it -> null, a31);
-        Assert.assertThat(a.equals(b));
+        Assert.assertTrue(a.equals(b));
         Assert.assertEquals(a.hashCode(), b.hashCode());
     }
 
